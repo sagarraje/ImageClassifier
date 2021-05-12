@@ -112,3 +112,6 @@ All three models score as expected.
 
 Well done with all models' scores.
 
+![alt text](https://github.com/sagarraje/ImageClassifier/blob/main/code.png?raw=true)
+
+
