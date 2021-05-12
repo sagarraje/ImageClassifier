@@ -1,0 +1,94 @@
+Print the value of Argument 1, Argument 2 and Argument 3: uploaded_images/ resnet dognames.txt
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+the values of dictionary return_disc 
+Filename value Cat_01.jpg    labelname = cat
+Filename value Dog_02.jpg    labelname = dog
+Filename value cat.jpg    labelname = 
+Filename value Dog_01.jpg    labelname = dog
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Cat_01.jpg  label:                        cat
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:                        cat.jpg  label:                           
+ 4 key:                     Dog_01.jpg  label:                        dog
+Argument value  of images_dir is uploaded_images/,  model is resnet and results_dic {'Cat_01.jpg': ['cat'], 'Dog_02.jpg': ['dog'], 'cat.jpg': [''], 'Dog_01.jpg': ['dog']}
+{'Cat_01.jpg': ['cat', 'egyptian cat, cat', 1], 'Dog_02.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0], 'cat.jpg': ['', 'tabby, tabby cat, cat', 1], 'Dog_01.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0]}
+
+     MATCH:
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat
+
+                       cat.jpg: 
+Real:                              Classifier:          tabby, tabby cat, cat
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+{'Cat_01.jpg': ['cat', 'egyptian cat, cat', 1, 0, 0], 'Dog_02.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0], 'cat.jpg': ['', 'tabby, tabby cat, cat', 1], 'Dog_01.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0]}
+{'Cat_01.jpg': ['cat', 'egyptian cat, cat', 1, 0, 0], 'Dog_02.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0, 1, 1], 'cat.jpg': ['', 'tabby, tabby cat, cat', 1], 'Dog_01.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0]}
+{'Cat_01.jpg': ['cat', 'egyptian cat, cat', 1, 0, 0], 'Dog_02.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0, 1, 1], 'cat.jpg': ['', 'tabby, tabby cat, cat', 1, 0, 0], 'Dog_01.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0]}
+{'Cat_01.jpg': ['cat', 'egyptian cat, cat', 1, 0, 0], 'Dog_02.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0, 1, 1], 'cat.jpg': ['', 'tabby, tabby cat, cat', 1, 0, 0], 'Dog_01.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0, 1, 1]}
+
+     MATCH:
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                       cat.jpg: 
+Real:                              Classifier:          tabby, tabby cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+print value of result dictionary {'Cat_01.jpg': ['cat', 'egyptian cat, cat', 1, 0, 0], 'Dog_02.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0, 1, 1], 'cat.jpg': ['', 'tabby, tabby cat, cat', 1, 0, 0], 'Dog_01.jpg': ['dog', 'american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier', 0, 1, 1]}
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+*******************************************************************
+Print the result of model                       RESNET                      
+*******************************************************************
+correct img         :   4
+Dog IMG             :   2
+not dog images      :   2
+Print  statistics in % on Model Run
+pct_match 50.0
+pct_correct_dogs 100.0
+pct_correct_breed 0.0
+pct_correct_notdogs 100.0
+
+In-correct Dog Breed Assignment:
+
+INCORRECT Dog Breed Assignment:
+
+correct val:                        dog   Dog Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+
+correct val:                        dog   Dog Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+
+** Total Elapsed Runtime: Hours:Minutes:Seconds = 0:0:16
