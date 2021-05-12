@@ -1,3 +1,5 @@
+![alt text](https://github.com/sagarraje/ImageClassifier/blob/main/certification.png?raw=true)
+
 Meets Specifications
 Dear Student,
 
